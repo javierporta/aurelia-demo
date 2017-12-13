@@ -1,0 +1,32 @@
+<template>
+  <table class="table table-striped" aurelia-table="data.bind: speakers; display-data.bind: $speakersData">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Language</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr repeat.for="speaker of $speakersData">
+        <td>${speaker.name}</td>
+        <td>
+          <div>
+            <table>
+              <tr>
+                <td>
+                  ${speaker.phone} </td>
+                    <td>
+                      <div>
+                        <img src="images/whatsapp-icon.png" style="max-height: 45px;" class="img-responsive voc_list_preview_img" alt="" title="">
+                      </div>
+                    </td>
+              </tr>
+            </table>
+          </div>
+          </td>
+          <td>${speaker.language}</td>
+      </tr>
+    </tbody>
+  </table>
+</template>

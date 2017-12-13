@@ -1,0 +1,58 @@
+<template>
+  <require from="bootstrap/css/bootstrap.css"></require>
+ 
+
+<form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Friendly Speakers</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Name">Name</label>  
+  <div class="col-md-4">
+  <input id="Name" name="Name" type="text" placeholder="Name" value.bind="name" class="form-control input-md">
+  <span class="help-block">Write your name</span>  
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="phone">Phone</label>  
+  <div class="col-md-4">
+  <input id="phone" name="phone" type="text" placeholder="Phone" value.bind="phone" class="form-control input-md">
+  <span class="help-block">Write your phone</span>  
+  </div>
+</div>
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="language">Select language</label>
+  <div class="col-md-4">
+    <select id="language" name="language" value.bind="language" class="form-control">
+      <option value="1">English</option>
+      <option value="2">Spanish</option>
+      <option value="3">French</option>
+    </select>
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="addMe"></label>
+  <div class="col-md-4">
+    <button id="addMe" name="addMe" class="btn btn-primary" click.delegate="addMe()">Add me!</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 label-info" style="color: white">List of people who want to speak with you</div>
+      <router-view class="col-md-8"></router-view>
+    </div>
+  </div>
+</template>
